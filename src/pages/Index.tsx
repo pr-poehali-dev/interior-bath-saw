@@ -38,6 +38,45 @@ const Index = () => {
     }
   ];
 
+  const materials = [
+    {
+      icon: "TreeDeciduous",
+      name: "Липа",
+      description: "Классический материал для парных. Не нагревается, приятный аромат, долговечность.",
+      price: "от 1 200 ₽/м²"
+    },
+    {
+      icon: "TreePine",
+      name: "Кедр",
+      description: "Премиум материал с целебными свойствами. Устойчив к влаге и температуре.",
+      price: "от 2 500 ₽/м²"
+    },
+    {
+      icon: "Leaf",
+      name: "Абаш",
+      description: "Африканский дуб. Не нагревается даже при высоких температурах.",
+      price: "от 3 200 ₽/м²"
+    },
+    {
+      icon: "Trees",
+      name: "Термоосина",
+      description: "Термообработанная древесина. Высокая стойкость к влаге и гниению.",
+      price: "от 1 800 ₽/м²"
+    },
+    {
+      icon: "Hexagon",
+      name: "Термоясень",
+      description: "Элитный материал с красивой текстурой. Прочный и долговечный.",
+      price: "от 2 800 ₽/м²"
+    },
+    {
+      icon: "BoxSelect",
+      name: "Канадский кедр",
+      description: "Премиальная древесина с насыщенным ароматом и красным оттенком.",
+      price: "от 3 500 ₽/м²"
+    }
+  ];
+
   const portfolio = [
     {
       image: "https://cdn.poehali.dev/projects/00a14e30-b787-4a82-8d1b-8cd171409f4f/files/5a00dcf7-d33e-4352-8172-922dd203b8cf.jpg",
@@ -91,6 +130,7 @@ const Index = () => {
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#services" className="hover:text-primary transition-colors">Услуги</a>
+            <a href="#materials" className="hover:text-primary transition-colors">Материалы</a>
             <a href="#portfolio" className="hover:text-primary transition-colors">Портфолио</a>
             <a href="#reviews" className="hover:text-primary transition-colors">Отзывы</a>
             <a href="#prices" className="hover:text-primary transition-colors">Цены</a>
@@ -149,7 +189,34 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="portfolio" className="py-20 px-4 bg-gradient-to-br from-secondary/5 to-primary/5">
+      <section id="materials" className="py-20 px-4 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div className="container mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Материалы для отделки</h2>
+          <p className="text-center text-muted-foreground mb-12 text-lg">
+            Работаем только с качественными натуральными материалами
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {materials.map((material, index) => (
+              <Card 
+                key={index} 
+                className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-secondary group animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-secondary to-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Icon name={material.icon as any} className="text-white" size={28} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{material.name}</h3>
+                  <p className="text-muted-foreground mb-3">{material.description}</p>
+                  <p className="text-lg font-bold text-secondary">{material.price}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">Портфолио работ</h2>
           <p className="text-center text-muted-foreground mb-12 text-lg">
