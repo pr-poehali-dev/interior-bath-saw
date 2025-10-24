@@ -264,15 +264,11 @@ const Index = () => {
               <div className="mt-8 pt-8 border-t space-y-4">
                 <div className="flex items-center gap-3">
                   <Icon name="Phone" className="text-primary" />
-                  <span className="text-lg">+7 (999) 123-45-67</span>
+                  <a href="tel:+79953004567" className="text-lg hover:text-primary transition-colors">+7 (995) 300-45-67</a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Icon name="Mail" className="text-primary" />
-                  <span className="text-lg">info@banyamaster.ru</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Icon name="MapPin" className="text-primary" />
-                  <span className="text-lg">Москва, ул. Строителей, 15</span>
+                  <a href="mailto:metizzzz@mail.ru" className="text-lg hover:text-primary transition-colors">metizzzz@mail.ru</a>
                 </div>
               </div>
             </CardContent>
