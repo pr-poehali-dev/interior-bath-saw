@@ -19,14 +19,14 @@ const Index = () => {
   const [includeLighting, setIncludeLighting] = useState(false);
 
   const materialPrices: Record<string, number> = {
-    lipa: 490,
-    cedar: 990,
-    abash: 1590,
-    thermowood: 590,
-    thermoash: 890,
-    canadianCedar: 1290,
-    pine: 290,
-    aspen: 390
+    pine: 350,
+    aspen: 450,
+    lipa: 650,
+    thermowood: 750,
+    thermoash: 950,
+    cedar: 1100,
+    canadianCedar: 1400,
+    abash: 1800
   };
 
   const materialNames: Record<string, string> = {
@@ -112,49 +112,49 @@ const Index = () => {
       icon: "TreePine",
       name: "Сосна",
       description: "Бюджетный вариант. Приятный хвойный аромат, подходит для предбанника.",
-      price: "от 290 ₽/м²"
+      price: "от 350 ₽/м²"
     },
     {
       icon: "Trees",
       name: "Осина",
       description: "Традиционный материал для русской бани. Не выделяет смолу, легко обрабатывается.",
-      price: "от 390 ₽/м²"
+      price: "от 450 ₽/м²"
     },
     {
       icon: "TreeDeciduous",
       name: "Липа",
       description: "Классический материал для парных. Не нагревается, приятный аромат, долговечность.",
-      price: "от 490 ₽/м²"
+      price: "от 650 ₽/м²"
     },
     {
       icon: "Leaf",
       name: "Термоосина",
       description: "Термообработанная древесина. Высокая стойкость к влаге и гниению.",
-      price: "от 590 ₽/м²"
+      price: "от 750 ₽/м²"
     },
     {
       icon: "Hexagon",
       name: "Термоясень",
       description: "Элитный материал с красивой текстурой. Прочный и долговечный.",
-      price: "от 890 ₽/м²"
+      price: "от 950 ₽/м²"
     },
     {
       icon: "TreePine",
       name: "Кедр",
       description: "Премиум материал с целебными свойствами. Устойчив к влаге и температуре.",
-      price: "от 990 ₽/м²"
+      price: "от 1 100 ₽/м²"
     },
     {
       icon: "BoxSelect",
       name: "Канадский кедр",
       description: "Премиальная древесина с насыщенным ароматом и красным оттенком.",
-      price: "от 1 290 ₽/м²"
+      price: "от 1 400 ₽/м²"
     },
     {
       icon: "Sparkles",
       name: "Абаш",
       description: "Африканский дуб. Не нагревается даже при высоких температурах.",
-      price: "от 1 590 ₽/м²"
+      price: "от 1 800 ₽/м²"
     }
   ];
 
